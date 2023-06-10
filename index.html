@@ -22,8 +22,8 @@
                         </div>
                         <div id="logo" class="col-sm-2">
                             <figure>
-                                <img class="img-fluid rounded float-right" src="assets/images/logotipo_qualirede_05.png" alt="logotipo_qualirede">
-                              </figure>
+                                <img class="img-fluid rounded float-right" src="assets/images/logotipo_qualirede_05.png" alt="logotipo_qualirede" />
+                            </figure>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                                                 <select class="form-control" id="cidade" aria-describedby="ufHelp" required>
                                                     <option selected="" value="">Selecione a cidade</option>
                                                 </select>
-                                            </div>                                            
+                                            </div>
                                         </div>
                                         <!--fim row-->
                                         <h5 class="mar-b20">Contato Comercial</h5>
@@ -117,7 +117,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="qtdBeneficiarios">Quantas vidas (beneficiários) de sua empresa?</span>
                                                     </div>
-                                                    <input type="number" class="form-control" placeholder="QTD" name="qtdBeneficiarios" aria-label="Quantidade vidas" aria-describedby="basic-addon1" required/>
+                                                    <input type="number" class="form-control" placeholder="QTD" name="qtdBeneficiarios" aria-label="Quantidade vidas" aria-describedby="basic-addon1" required />
                                                     <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
                                                 </div>
                                             </div>
@@ -126,7 +126,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="qtdPrestadores">Quantos prestadores credenciados?</span>
                                                     </div>
-                                                    <input type="number" class="form-control" placeholder="QTD" name="qtdPrestadores" aria-label="Quantidade prestadores" aria-describedby="basic-addon1" required/>
+                                                    <input type="number" class="form-control" placeholder="QTD" name="qtdPrestadores" aria-label="Quantidade prestadores" aria-describedby="basic-addon1" required />
                                                     <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
                                                 </div>
                                             </div>
@@ -138,7 +138,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="volumeAutorizacoes">Volume mensal de autorizações emitidas (senhas):</span>
                                                     </div>
-                                                    <input name="qtdeAutorizacoes" id="qtdeAutorizacoes" type="number" class="form-control" placeholder="QTD" aria-label="Quantidade autorizações" aria-describedby="basic-addon1" required/>
+                                                    <input name="qtdeAutorizacoes" id="qtdeAutorizacoes" type="number" class="form-control" placeholder="QTD" aria-label="Quantidade autorizações" aria-describedby="basic-addon1" required />
                                                     <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
                                                 </div>
                                             </div>
@@ -147,7 +147,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="volumeContas">Volume mensal de contas médicas processadas:</span>
                                                     </div>
-                                                    <input type="number" class="form-control" placeholder="QTD" name="volumeContas" aria-label="Quantidade contas" aria-describedby="basic-addon1" required/>
+                                                    <input type="number" class="form-control" placeholder="QTD" name="volumeContas" aria-label="Quantidade contas" aria-describedby="basic-addon1" required />
                                                     <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
                                                 </div>
                                             </div>
@@ -159,7 +159,7 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="qtdUsuarios">Estimativa de pessoas que utilizarão o sistema:</span>
                                                     </div>
-                                                    <input name="qtdUsuarios" id="qtdUsuarios" type="number" class="form-control" placeholder="QTD" aria-label="Quantidade usuários" aria-describedby="basic-addon1" required/>
+                                                    <input name="qtdUsuarios" id="qtdUsuarios" type="number" class="form-control" placeholder="QTD" aria-label="Quantidade usuários" aria-describedby="basic-addon1" required />
                                                     <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
                                                 </div>
                                             </div>
@@ -536,10 +536,507 @@
                                     </div>
                                     <div class="input-group form-check">
                                         <input type="checkbox" class="form-check-input" id="checkpolitica" aria-describedby="checkpoliticaHelp" required />
-                                        <label class="form-check-label" for="checkpolitica">Declaro que li e estou de acordo com a <a href="#" target="_parent">Política de Privacidade da Qualirede</a> com relação aos meus dados fornecidos neste site.</label>
+                                        <label class="form-check-label" for="checkpolitica">
+                                            Declaro que li e estou de acordo com a <a href="#ModalLongoExemplo" data-toggle="modal">Política de Privacidade da Qualirede</a> com relação aos meus dados fornecidos neste site.
+                                        </label>
                                         <div class="invalid-feedback">
                                             Você deve concordar, antes de continuar.
                                         </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="TituloModalLongoExemplo">Política de Privacidade</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div
+                                                                class="elementor-element elementor-element-d5d32b1 elementor-widget elementor-widget-text-editor"
+                                                                data-id="d5d32b1"
+                                                                data-element_type="widget"
+                                                                data-widget_type="text-editor.default"
+                                                            >
+                                                                <div class="elementor-widget-container">
+                                                                    <style>
+                                                                        /*! elementor - v3.10.2 - 29-01-2023 */
+                                                                        .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
+                                                                            background-color: #818a91;
+                                                                            color: #fff;
+                                                                        }
+                                                                        .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
+                                                                            color: #818a91;
+                                                                            border: 3px solid;
+                                                                            background-color: transparent;
+                                                                        }
+                                                                        .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
+                                                                            margin-top: 8px;
+                                                                        }
+                                                                        .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
+                                                                            width: 1em;
+                                                                            height: 1em;
+                                                                        }
+                                                                        .elementor-widget-text-editor .elementor-drop-cap {
+                                                                            float: left;
+                                                                            text-align: center;
+                                                                            line-height: 1;
+                                                                            font-size: 50px;
+                                                                        }
+                                                                        .elementor-widget-text-editor .elementor-drop-cap-letter {
+                                                                            display: inline-block;
+                                                                        }
+                                                                    </style>
+                                                                    <p>
+                                                                        A privacidade e proteção de dados pessoais é importante para Qualirede sendo ela praticada efetivamente em todos os nossos processos de negócio, por todos os nossos
+                                                                        colaboradores e na relação com todos os nossos clientes, fornecedores, terceiros, prestadores de serviços e parceiros de negócio.
+                                                                    </p>
+                                                                    <p>
+                                                                        Para tanto, desenvolvemos esta Declaração de Privacidade com o objetivo de apresentarmos aos titulares de dados como tratamos e protegemos os dados pessoais e como
+                                                                        garantimos os direitos relacionados à privacidade e proteção de dados.
+                                                                    </p>
+                                                                    <p>
+                                                                        Além desta Declaração de Privacidade, a Qualirede mantém um programa interno de governança em Segurança da Informação e Proteção de Dados contemplando o desenvolvimento
+                                                                        e manutenção contínuos de uma Política de Segurança da Informação e uma Política de Proteção de Dados.
+                                                                    </p>
+                                                                    <ol>
+                                                                        <li><strong>QUEM SOMOS?</strong></li>
+                                                                    </ol>
+                                                                    <p>
+                                                                        Somos a Qualirede, sob CNPJ 10.981.905/0001-43, empresa especializada em trazer soluções de gestão em planos de saúde para o setor público há mais de 10 anos no
+                                                                        mercado.
+                                                                    </p>
+                                                                    <ol start="2">
+                                                                        <li><strong>INFORMAÇÕES GERAIS E PRINCÍPIOS</strong></li>
+                                                                    </ol>
+                                                                    <p>
+                                                                        Nesta Declaração de Privacidade observamos os requisitos de privacidade e proteção de dados definidos na LEI N<sup>o</sup>&nbsp;13.709, DE 14 DE AGOSTO DE 2018 – Lei
+                                                                        Geral de Proteção de Dados.
+                                                                    </p>
+                                                                    <p>
+                                                                        Os conceitos, termos e definições que aplicamos nesta Declaração de Privacidade estão definidos no Art. 5<sup>o</sup>&nbsp;da LEI N<sup>o</sup>&nbsp;13.709, DE 14 DE
+                                                                        AGOSTO DE 2018 – Lei Geral de Proteção de Dados.
+                                                                    </p>
+                                                                    <p>
+                                                                        Para a privacidade e proteção de dados pessoais a Qualirede observa nesta Declaração de Privacidade e em seu programa interno de governança em Segurança da Informação e
+                                                                        Proteção de Dados os seguintes princípios, conforme LEI N<sup>o</sup>&nbsp;13.709, DE 14 DE AGOSTO DE 2018 – Lei Geral de Proteção de Dados:
+                                                                    </p>
+                                                                    <ol>
+                                                                        <li>
+                                                                            <strong>Finalidade</strong>: o tratamento dos dados de pessoa física somente poderá ocorre após definida uma finalidade clara, devidamente registrada no mapa de
+                                                                            finalidades e com base legal definida.
+                                                                        </li>
+                                                                        <li><strong>Adequação</strong>: o tratamento deve ser restringir à finalidade definida e não deve ocorrer de forma incompatível com tal finalidade.</li>
+                                                                        <li>
+                                                                            <strong>Necessidade</strong>: as informações obtidas devem se restringir ao mínimo necessário para a realização da finalidade previamente definida, abrangendo
+                                                                            apenas os dados pertinentes para tal.
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Livre Acesso</strong>: os titulares de dados pessoais devem possuir canal de atendimento que lhes permita consulta sobre a forma, tratamento e segurança de
+                                                                            seus dados pessoais.
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Qualidade dos Dados</strong>: os dados tratados devem ser claros, exatos, relevantes e atualizados, em relação as suas respectivas finalidades específicas.
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Transparência</strong>: os titulares de dados pessoais devem possuir canal de atendimento que lhes permita obter informações claras e precisas sobre o
+                                                                            tratamento realizado com seus dados, inclusive em relação aos agentes de tratamento envolvidos.
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Segurança</strong>: a Qualirede deve planejar, implementar, manter, analisar criticamente e melhorar continuamente medidas técnicas e administrativas de
+                                                                            gestão de segurança da informação.
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Prevenção</strong>: as medidas técnicas e administrativas de gestão de segurança da informação devem também atuar na prevenção de ocorrência de incidentes.
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Não Discriminação</strong>: em nenhuma hipótese o tratamento de dados de pessoas físicas será utilizado em situações discriminatórias, ilícitas ou abusivas.
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Responsabilização e Prestação de Contas</strong>: a Qualirede deve possuir controles e mecanismos de demonstração da eficácia de suas medidas de segurança
+                                                                            da informação e proteção de dados.
+                                                                        </li>
+                                                                    </ol>
+                                                                    <ol start="3">
+                                                                        <li><strong>COM QUAIS FINALIDADES E BASES LEGAIS TRATAMOS OS DADOS PESSOAIS?</strong></li>
+                                                                    </ol>
+                                                                    <p>Nós da Qualirede somente realizamos o tratamento de dados pessoais após definirmos uma finalidade específica e base legal para tal.</p>
+                                                                    <p>
+                                                                        Em nosso programa interno de governança em Segurança da Informação e Proteção de Dados possuímos o mapeamento detalhados de todas as finalidades e bases legais que
+                                                                        utilizamos para o tratamento de dados pessoais, através de nosso Registro de Operações de Tratamento de Dados Pessoais (<em>RoPA-Record of Processing Activities</em>),
+                                                                        incluindo definições de categorias de dados utilizados, recursos envolvidos (ex. sistemas de informação utilizados), transferências ao exterior e compartilhamentos
+                                                                        realizados com outras empresas.
+                                                                    </p>
+                                                                    <p>Basicamente tratamos dados pessoais nos seguintes casos e com as seguintes bases legais:</p>
+                                                                    <table>
+                                                                        <th>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p style="text-align: left;"><strong>Caso de Finalidade e Base Legal</strong></p>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <p style="text-align: center;"><strong>Dados Pessoais</strong></p>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <p style="text-align: center;"><strong>Dados Pessoais Sensíveis</strong></p>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>
+                                                                                        1.&nbsp;&nbsp;&nbsp;&nbsp; Processos administrativos e operacionais para o&nbsp;<strong>cumprimento de contratos</strong>&nbsp;firmados com nossos
+                                                                                        clientes.
+                                                                                    </p>
+                                                                                </td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                                <td>&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>
+                                                                                        2.&nbsp;&nbsp;&nbsp;&nbsp; Processos administrativos e operacionais, quando solicitados por clientes explicitamente através de&nbsp;
+                                                                                        <strong>consentimento.</strong>
+                                                                                    </p>
+                                                                                </td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>
+                                                                                        3.&nbsp;&nbsp;&nbsp;&nbsp; Procedimentos internos de&nbsp;<strong>legítimo interesse</strong>&nbsp;que viabilizem o atendimento de clientes, por
+                                                                                        solicitação destes via contrato ou consentimento, sempre com o objetivo legítimo de melhor atender aos interesses do cliente
+                                                                                    </p>
+                                                                                </td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                                <td>&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>
+                                                                                        4.&nbsp;&nbsp;&nbsp;&nbsp; Procedimentos internos de cumprimento de&nbsp;<strong>obrigação legal</strong>, conforme casos e necessidades previstas em
+                                                                                        lei
+                                                                                    </p>
+                                                                                </td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>
+                                                                                        5.&nbsp;&nbsp;&nbsp;&nbsp; Situações relacionadas à&nbsp;<strong>proteção ao crédito</strong>&nbsp;quando assim identificado, aplicável e sempre
+                                                                                        conforme a lei
+                                                                                    </p>
+                                                                                </td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                                <td style="text-align: center;">&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>
+                                                                                        6.&nbsp;&nbsp;&nbsp;&nbsp; Situações relacionadas ao nosso&nbsp;<strong>exercício regular de direitos</strong>, quando assim identificado, aplicável e
+                                                                                        sempre conforme a lei
+                                                                                    </p>
+                                                                                </td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>
+                                                                                        7.&nbsp;&nbsp;&nbsp;&nbsp; Cumprimento de requisitos para&nbsp;<strong>políticas públicas</strong>, quando assim identificado, aplicável e sempre
+                                                                                        conforme a lei
+                                                                                    </p>
+                                                                                </td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>
+                                                                                        8.&nbsp;&nbsp;&nbsp;&nbsp; Cumprimento de requisitos para&nbsp;<strong>órgãos de pesquisa</strong>, quando assim identificado, aplicável e sempre
+                                                                                        conforme a lei
+                                                                                    </p>
+                                                                                </td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>
+                                                                                        9.&nbsp;&nbsp;&nbsp;&nbsp; Situações relacionadas à&nbsp;<strong>proteção à vida</strong>, quando assim identificado, aplicável e sempre conforme a lei
+                                                                                    </p>
+                                                                                </td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>10.&nbsp; Situações relacionadas à&nbsp;<strong>tutela de saúde</strong>, quando assim identificado, aplicável e sempre conforme a lei</p>
+                                                                                </td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p>
+                                                                                        11.&nbsp; Situações relacionadas à&nbsp;<strong>prevenção à fraude e segurança</strong>&nbsp;do titular, sempre observados os direitos e liberdades
+                                                                                        fundamentais do titular.
+                                                                                    </p>
+                                                                                </td>
+                                                                                <td style="text-align: center;">&nbsp;</td>
+                                                                                <td><p style="text-align: center;">X</p></td>
+                                                                            </tr>
+                                                                        </th>
+                                                                    </table>
+                                                                    <p>
+                                                                        Caso deseje receber informações detalhadas sobre finalidades e bases legais relacionadas especificamente com o tratamento de seus dados pessoais consulte a seção 12
+                                                                        desta Declaração de Privacidade.
+                                                                    </p>
+                                                                    <ol start="4">
+                                                                        <li><strong>COMO, QUANDO E QUAIS DADOS PESSOAIS COLETAMOS?</strong></li>
+                                                                    </ol>
+                                                                    <p>
+                                                                        Coletamos seus dados somente através de nossos sistemas de informação e canais corporativos devidamente homologados por nosso encarregado de proteção de dados, ou seja,
+                                                                        a Qualirede não realiza a coleta de dados pessoais através de quaisquer tipos de recursos pessoais (ex. e-mail, whatsapp, etc) de seus colaboradores, fornecedores,
+                                                                        prestadores de serviços ou parceiros de negócio.
+                                                                    </p>
+                                                                    <p>
+                                                                        No momento em que coletamos seus dados já possuímos previamente a definição de finalidade específica e base legal para o tratamento de dados, devidamente definidos em
+                                                                        nosso Registro de Operações de Tratamento de Dados Pessoais (RoPA), conforme citamos na seção 3 desta Declaração de Privacidade.
+                                                                    </p>
+                                                                    <p>
+                                                                        Coletamos somente os dados estritamente necessários para a realização da finalidade específica definida no Registro de Operações. As categorias de dados que podem ser
+                                                                        coletadas, conforme a necessidade de cada finalidade específica são:
+                                                                    </p>
+                                                                    <ol>
+                                                                        <li><strong>Cadastrais</strong>– categoria que envolve informações básicas de pessoa física. Ex. Nome, RG, CPF, telefone, endereço etc.</li>
+                                                                        <li>
+                                                                            <strong>Administrativos</strong>– categoria que envolve informações administrativas produzidas a partir dos dados cadastrais. Ex. Contratos, formulários,
+                                                                            relatórios, etc.
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Financeiros</strong>– categoria de dados que envolve informações financeiras quando relacionadas com pessoa física. Ex. boleto de cobrança, histórico
+                                                                            financeiro, pagamentos, etc.
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Sensível Médicos</strong>– categoria para representar dados sensíveis médicos como prontuário médico, resultados de exames, informações clínicas no
+                                                                            paciente, dados genéticos, informações psicológicas, doenças e afins.
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Sensíveis Outros</strong>– categoria para representar dados sensíveis não médicos como origem racial ou étnica, convicção religiosa, opinião política,
+                                                                            filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à vida sexual ou biométrico.
+                                                                        </li>
+                                                                        <li><strong>Menores</strong>– esta categoria se relaciona com as demais para indicar que os dados envolvidos podem ser de menores de idade.</li>
+                                                                        <li><strong>Multimídia</strong>– nesta categoria os dados envolvem o tratamento de fotos, vídeos, áudios, imagem, voz, geolocalização e afins.</li>
+                                                                        <li>
+                                                                            <strong>Logs Digitais</strong>– categoria de dados que incluí cookies, endereços IPs e logs de sistemas de denotam o comportamento do usuário. Ex. logs de
+                                                                            navegação.
+                                                                        </li>
+                                                                        <li><strong>Anonimizados</strong>– categoria utilizada para indicar a existência de dados que não identificam pessoais físicas.</li>
+                                                                        <li>
+                                                                            <strong>Outros&nbsp;</strong>– categoria para representar dados excepcionais que não se enquadraram nas categorias anteriores, neste caso o tipo de dado específico
+                                                                            será citado no Registro de Operações de Tratamento de Dados Pessoais (RoPA).
+                                                                        </li>
+                                                                    </ol>
+                                                                    <ol start="5">
+                                                                        <li><strong>COMO ARMAZENAMOS e ACESSAMOS OS DADOS PESSOAIS?&nbsp;</strong></li>
+                                                                    </ol>
+                                                                    <p>
+                                                                        Na Qualirede armazenamos e acessamos os dados pessoais somente através de recursos corporativos devidamente homologados e somente após a definição de finalidade
+                                                                        específica e base legal em nosso Registro de Operações de Tratamento de Dados Pessoais (RoPA).
+                                                                    </p>
+                                                                    <p>
+                                                                        Para a proteção do armazenamento e do acesso aos dados pessoais utilizamos controles técnicos e administrativos de Segurança da Informação os quais estão definidos em
+                                                                        nossa Política de Segurança da Informação e são mantidos através de nosso programa interno de governança em segurança da informação e proteção de dados.
+                                                                    </p>
+                                                                    <p>
+                                                                        Os dados pessoais são armazenados estritamente pelo tempo necessário para o cumprimento da finalidade e base legal, após este tempo os dados podem ser eliminados,
+                                                                        anonimizados ou mantidos através da definição de nova finalidade e sua respectiva base legal, sempre em cumprimento da legislação vigente.
+                                                                    </p>
+                                                                    <p>Para mais informações sobre retenção e eliminação de dados pessoais consulte a seção 8 desta Declaração de Privacidade.</p>
+                                                                    <ol start="6">
+                                                                        <li><strong>QUANDO REALIZAMOS A TRANSFERÊNCIA DE DADOS PESSOAIS PARA O EXTERIOR?</strong></li>
+                                                                    </ol>
+                                                                    <p>
+                                                                        A sede e operação interna da Qualirede ocorre no Brasil, porém nossos fornecedores, prestadores de serviço e parceiros de negócio podem ter sede e/ou operação no
+                                                                        exterior. Nestes casos poderemos ter a necessidade de transferir dados pessoais para o exterior.
+                                                                    </p>
+                                                                    <p>
+                                                                        Sempre que a Qualirede realizar a transferência de dados para o exterior, verificaremos a conformidade junto à empresa destinatária em relação à legislação brasileira
+                                                                        de privacidade e proteção de dados e a transferência de dados somente ocorrerá se entendermos que tal conformidade é adequada.
+                                                                    </p>
+                                                                    <p>
+                                                                        Todas as finalidades e bases legais que geram transferência de dados para o exterior estão devidamente mapeadas em nosso Registro de Operações de Tratamento de Dados
+                                                                        (RoPA).
+                                                                    </p>
+                                                                    <p>
+                                                                        Caso deseje receber informações detalhadas sobre nossas transferências ao exterior relacionadas especificamente com o tratamento de seus dados pessoais, entre em
+                                                                        contato com nosso Encarregado de Dados Pessoais conforme a seção “Fale Conosco” desta Declaração de Privacidade.
+                                                                    </p>
+                                                                    <ol start="7">
+                                                                        <li><strong>COMO, QUANDO E QUAIS DADOS PESSOAIS COMPARTILHAMOS COM OUTROS AGENTES DE TRATAMENTO?</strong></li>
+                                                                    </ol>
+                                                                    <p>
+                                                                        Outros agentes de tratamento de dados, como operadores ou controladores, podem receber dados pessoais compartilhados pela Qualirede. Nestes casos os dados pessoais
+                                                                        somente serão compartilhados para finalidades específicas e com bases legais definidas.
+                                                                    </p>
+                                                                    <p>
+                                                                        Todas as situações de compartilhamento de dados pessoais com outros controladores e operadores estão devidamente definidas em nosso Registro de Operações de Tratamento
+                                                                        de Dados Pessoais (RoPA).
+                                                                    </p>
+                                                                    <p>
+                                                                        Somente compartilharemos dados com outros agentes de tratamento quando tivermos uma relação formal com tal agente que justifique tal compartilhamento. Esta relação
+                                                                        formal pode ser definida através de contrato ou através de termos, declarações ou acordos entre as partes.
+                                                                    </p>
+                                                                    <p>
+                                                                        O compartilhamento de dados pessoais somente ocorrerá através de recursos e canais formais disponibilizados pela Qualirede ou pelos agentes de tratamento, ou seja,
+                                                                        nenhuma troca de dados ocorrerá através de recursos ou canais não acordados entre as partes.
+                                                                    </p>
+                                                                    <p>
+                                                                        Somente serão compartilhados os dados pessoais estritamente necessários para o desempenho das finalidades específicas atribuídas ao agente de tratamento, seja ele
+                                                                        operador ou controlador.
+                                                                    </p>
+                                                                    <ol start="8">
+                                                                        <li><strong>POR QUANTO TEMPO RETEMOS E COMO ELIMINAMOS OS DADOS PESSOAIS?</strong></li>
+                                                                    </ol>
+                                                                    <p>
+                                                                        Os dados pessoais são retidos apenas pelo tempo necessário para o desempenho da finalidade ao qual foi coletado. Após o desempenho desta finalidade os dados pessoais
+                                                                        poderão ser:
+                                                                    </p>
+                                                                    <ol>
+                                                                        <li>
+                                                                            <strong>Anonimizados</strong>: neste caso os dados pessoais são mantidos de forma a não identificar seu titular e de forma a garantir a irreversibilidade dos dados,
+                                                                            ou seja, eles não poderão ser novamente associados a dados que identifiquem o titular;
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Mantidos por outra finalidade</strong>: após o término de uma finalidade os dados poderão ser mantidos quando associados a outra finalidade e sua respectiva
+                                                                            base legal. Por exemplo, ao final de um contrato ou consentimento os dados ainda podem ser mantidos para o cumprimento de obrigação legal ou para o exercício
+                                                                            regular de direitos da Qualirede, sempre observando o cumprimento da legislação vigente;
+                                                                        </li>
+                                                                        <li><strong>Eliminados</strong>: neste caso os dados são eliminados.</li>
+                                                                    </ol>
+                                                                    <p>Quando eliminarmos os dados pessoais, sejam eles físicos ou lógicos, faremos isto de modo que os dados não possam ser mais recuperados.</p>
+                                                                    <p>
+                                                                        Algumas finalidades nossas, por suas características específicas, podem ter um tempo de retenção de dados pessoais específicos, neste caso tal definição constará em
+                                                                        nosso Registro de Operações de Tratamento de Dados Pessoais (RoPA).
+                                                                    </p>
+                                                                    <ol start="9">
+                                                                        <li><strong>UTILIZAMOS COOKIES OU OUTROS TIPOS DE RASTROS DIGITAIS?</strong></li>
+                                                                    </ol>
+                                                                    <p>
+                                                                        Os sites, sistemas, portais e aplicativos da Qualirede podem fazer uso de cookies e outros tipos de rastros digitais. Os rastros digitais podem ser dos seguintes tipos:
+                                                                    </p>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <strong>Essenciais ou Necessários</strong>: são cookies e rastros digitais requeridos para o funcionamento básico dos sites, sistemas, portais e aplicativos. Neste
+                                                                            caso os rastros serão utilizados estritamente para o funcionamento dos respectivos sistemas;
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Opcionais</strong>: são cookies e rastros digitais opcionais ao funcionamento dos sites, sistemas, portais e aplicativos. Exemplos são rastros de marketing,
+                                                                            estatísticas e experiência personalizada. Nestes casos será solicitado consentimento para o uso dos cookies e rastros digitais para suas finalidades específicas.
+                                                                        </li>
+                                                                    </ul>
+                                                                    <p>
+                                                                        Em nosso Registro de Operações de Tratamento de Dados Pessoais (RoPA) estão definidas todas as finalidades e bases legais que fazem uso de cookies e rastros digitais.
+                                                                    </p>
+                                                                    <ol start="10">
+                                                                        <li><strong>COMO PROTEGEMOS OS DADOS PESSOAIS ATRAVÉS DA GESTÃO DE SEGURANÇA DA INFORMAÇÃO?</strong></li>
+                                                                    </ol>
+                                                                    <p>
+                                                                        Nós da Qualirede estamos comprometidos com o planejamento, execução e acompanhamento de ações, com a análise crítica e com a melhoria contínua em um Sistema de Gestão
+                                                                        de Segurança da Informação. Para tanto utilizamos como base os preceitos definidos na ABNT NBR ISO/IEC 27001 – SGSI-Sistema de Gestão de Segurança da Informação
+                                                                        juntamente com as metodologias de gestão de segurança da informação da Tracker Segurança da Informação.
+                                                                    </p>
+                                                                    <p>
+                                                                        Mantemos uma Política de Segurança da Informação (documento interno) com os controles necessários e adequados à garantia de confidencialidade, integridade e
+                                                                        disponibilidade das informações sob nosso controle.
+                                                                    </p>
+                                                                    <p>
+                                                                        Também atuamos mais especificamente na gestão da privacidade e proteção de dados, neste caso com base nos preceitos definidos na ABNT NBR ISO/IEC 27701 – SGPI-Sistema
+                                                                        de Gestão da Privacidade da Informação juntamente com as metodologias de gestão da privacidade e proteção de dados da Tracker Segurança da Informação.
+                                                                    </p>
+                                                                    <p>
+                                                                        Mantemos uma Política de Proteção de Dados (documento interno) com os controles necessários e adequados à garantia da privacidade e proteção de dados pessoais sob nosso
+                                                                        controle.
+                                                                    </p>
+                                                                    <p>
+                                                                        A Política de Segurança da Informação e a Política de Proteção de Dados, juntamente com seus documentos derivados (políticas específicas, normas e procedimentos) formam
+                                                                        nosso programa interno de Segurança da Informação e Proteção de Dados, continuamente mantido e atualizado em nossa empresa.
+                                                                    </p>
+                                                                    <ol start="11">
+                                                                        <li><strong>QUAIS OS DIREITOS DO TITULAR DE DADOS PESSOAIS E COMO EXERCÊ-LOS?</strong></li>
+                                                                    </ol>
+                                                                    <p>Os seguintes direitos dos titulares de dados pessoais são observados e devidamente disponibilizados pela Qualirede:</p>
+                                                                    <ol>
+                                                                        <li><strong>Confirmação</strong>: confirmar a existência de tratamento de seus dados pessoais.</li>
+                                                                        <li><strong>Acesso</strong>: acessar seus dados pessoais.</li>
+                                                                        <li><strong>Correção</strong>: solicitar que dados incompletos, desatualizados ou incorretos sejam corrigidos.</li>
+                                                                        <li>
+                                                                            <strong>Anonimização, bloqueio ou eliminação</strong>: solicitar anonimização, bloqueio ou eliminação no caso de dados pessoais desnecessários, excessivos ou
+                                                                            tratados em desconformidade com a LGPD. Inclui-se aqui a eliminação mesmo após o consentimento.
+                                                                        </li>
+                                                                        <li><strong>Portabilidade</strong>: solicitar a transferência de dados pessoais para outro fornecedor, serviço, produto.</li>
+                                                                        <li>
+                                                                            <strong>Compartilhamento</strong>: solicitar informações sobre as entidades públicas e privadas com as quais o controlador realizou o compartilhamento de dados
+                                                                            pessoais.
+                                                                        </li>
+                                                                        <li><strong>Revogação de Consentimento</strong>: revogar a qualquer momento o consentimento de uso de seus dados pessoais tratados.</li>
+                                                                        <li>
+                                                                            <strong>Revisão de decisão automatizada</strong>: solicitar revisão e informações sobre quais os critérios e processos utilizados na tomada de decisão automatizada,
+                                                                            quando aplicável.
+                                                                        </li>
+                                                                        <li>
+                                                                            <strong>Explicação</strong>: obtenção de informações sobre a possibilidade de não consentir com o tratamento de dados pessoais e sobre as consequências da negativa.
+                                                                            Inclui-se aqui quaisquer outras explicações ou solicitações demandadas pelos titulares.
+                                                                        </li>
+                                                                    </ol>
+                                                                    <p>
+                                                                        Caso deseje exercer seus direitos, sejam os acima citados ou quaisquer outros relacionados com a privacidade e proteção de dados pessoais, entre em contato com nosso
+                                                                        Encarregado de Proteção de Dados conforme a seção 12 desta Declaração de Privacidade.
+                                                                    </p>
+                                                                    <ol start="12">
+                                                                        <li><strong>FALE COM NOSSO ENCARREGADO DE PROTEÇÃO DE DADOS.</strong></li>
+                                                                    </ol>
+                                                                    <p>
+                                                                        A Qualirede, em conformidade com a Lei 13.709/2018, designou o colaborador<strong>&nbsp;Erivaldo Lapa da Conceição</strong>&nbsp;como encarregado de Proteção de Dados
+                                                                        Pessoais.
+                                                                    </p>
+                                                                    <p>As atividades do encarregado são:</p>
+                                                                    <ul>
+                                                                        <li>Aceitar reclamações e comunicações dos titulares, prestar esclarecimentos e adotar providências;</li>
+                                                                        <li>Receber comunicações da autoridade nacional e adotar providências;</li>
+                                                                        <li>Orientar os funcionários e os contratados da entidade a respeito das práticas a serem tomadas em relação à proteção de dados pessoais; e</li>
+                                                                        <li>Executar as demais atribuições determinadas pelo controlador ou estabelecidas em normas complementares.</li>
+                                                                    </ul>
+                                                                    <p>
+                                                                        Desta forma, caso tenha dúvidas ou necessidade de algum esclarecimento&nbsp;sobre o tratamento dos dados ou&nbsp;por qualquer outro motivo que envolva esse assunto
+                                                                        entre em contato com nosso DPO através do e-mail:&nbsp;
+                                                                        <a href="mailto:lgpd@qualirede.com.br">lgpd@qualirede.com.br</a>.
+                                                                    </p>
+                                                                    <ol start="13">
+                                                                        <li><strong>SOBRE ATUALIZAÇÕES desta DECLARAÇÃO DE PRIVACIDADE.</strong></li>
+                                                                    </ol>
+                                                                    <p>
+                                                                        Estamos sempre melhorando a privacidade e proteção de dados pessoais, desta forma esta Declaração de Privacidade pode ser atualizada a qualquer momento com efeito
+                                                                        imediato.
+                                                                    </p>
+                                                                    <p>Recomendamos que você consulte periodicamente esta declaração de privacidade para que fique atualizado em relação à última versão disponibilizada.</p>
+                                                                    <p>Esta Declaração de Privacidade está na versão 1.2 disponibilizada em 04 de Janeiro de 2021.</p>
+                                                                    <p>Obs: Também pode ser citada e considerada como “Política de Privacidade” ou “Aviso de Privacidade”.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Fim Modal -->
                                     </div>
                                 </div>
                             </div>
@@ -583,9 +1080,9 @@
         </script>
         <script language="JavaScript" type="text/javascript" charset="utf-8">
             new dgCidadesEstados({
-            cidade: document.getElementById('cidade'),
-            estado: document.getElementById('estado')
-            })
+                cidade: document.getElementById("cidade"),
+                estado: document.getElementById("estado"),
+            });
         </script>
         <script src="js/script.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
