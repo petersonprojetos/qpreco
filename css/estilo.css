@@ -27,12 +27,15 @@ main{
     color: #FFFFFF !important;
     min-width: 379px;
 }
-.form-checkinput{
+.form-check-input, .form-checkinput{
     padding: 0;
     margin:0 5px 0 0;
     position: relative;
     top: 1px;
     overflow: hidden;
+}
+.form-check {
+    padding-left: 0px !important;
 }
 .btn-primary {
     color: #fff;
@@ -56,4 +59,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: baseline;
+}
+.modal-dialog {
+    min-width: 60vw !important;
 }
