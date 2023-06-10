@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css\estilo.css" />
+        <title>Formulário de coleta de requisitos</title>
+        <script type="text/javascript" src="js/cidades-estados-1.4-utf8.js"></script>
+    </head>
+    <body class="bg-light" onload="appMovel()">
+        <main role="main" class="container">
+            <header>
+                <div class="row">
+                    <div class="row d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded shadow-sm">
+                        <div class="col-sm-10">
+                            <h4 class="mb-0 text-white">
+                                Forlumário de coleta de requisitos para formulação de proposta
+                            </h4>
+                            <small>Forneça o máximo de informaões possíveis. Quanto maior a precisão mais assertiva será a análise.</small>
+                        </div>
+                        <div id="logo" class="col-sm-2">
+                            <figure>
+                                <img class="img-fluid rounded float-right" src="assets/images/logotipo_qualirede_05.png" alt="logotipo_qualirede">
+                              </figure>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section>
+                <div class="my-3 p-3 bg-white rounded shadow-sm">
+                    <div class="accordion" id="accordionExample">
+                        <form action="calcular.php" method="post" class="needs-validation" novalidate>
+                            <!--COLLAPSE Identificação do cliente-->
+                            <div class="card">
+                                <header>
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-t" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Identificação do Cliente:
+                                            </button>
+                                        </h5>
+                                    </div>
+                                </header>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="form-group col-sm">
+                                                <label for="razaoSocial">Razão Social</label>
+                                                <input type="text" class="form-control" id="razaoSocial" aria-describedby="nomeHelp" placeholder="Razão Social da empresa" required />
+                                            </div>
+                                            <div class="form-group col-sm">
+                                                <label for="nomeFantasia">Nome Fantasia</label>
+                                                <input type="text" class="form-control" id="nomeFantasia" aria-describedby="fantasiaHelp" placeholder="Nome Fantasia da empresa" required />
+                                            </div>
+                                        </div>
+                                        <!--fim row-->
+                                        <div class="form-row">
+                                            <div class="form-group col-sm">
+                                                <label for="cnpj">CNPJ</label>
+                                                <input type="number" class="form-control" id="cnpj" aria-describedby="cnpjHelp" placeholder="CNPJ da empresa" required />
+                                                <small id="cnpjHelp" class="form-text text-muted">Informe apenas números (14 dígitos). Exemplo: 12345678912345.</small>
+                                            </div>
+                                            <div class="form-group col-sm">
+                                                <label for="estado">UF</label>
+                                                <select class="form-control" id="estado" aria-describedby="ufHelp" required>
+                                                    <option selected="" value="">Selecione o Estado (UF)</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm">
+                                                <label for="cidade">Cidade</label>
+                                                <select class="form-control" id="cidade" aria-describedby="ufHelp" required>
+                                                    <option selected="" value="">Selecione a cidade</option>
+                                                </select>
+                                            </div>                                            
+                                        </div>
+                                        <!--fim row-->
+                                        <h5 class="mar-b20">Contato Comercial</h5>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm">
+                                                <label for="nomeContato">Nome completo</label>
+                                                <input type="name" class="form-control" id="nomeContato" aria-describedby="nomeContatoHelp" placeholder="Nome do contato" required />
+                                            </div>
+                                            <div class="form-group col-sm">
+                                                <label for="email">Endereço de email</label>
+                                                <input name="emailContato" id="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Seu email" autocomplete="off" required />
+                                                <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+                                            </div>
+                                            <div class="form-group col-sm">
+                                                <label for="telefoneContato">Telefone de contato</label>
+                                                <input type="number" class="form-control" id="telefoneContato" aria-describedby="telefoneContatoHelp" placeholder="Telefone de contato" required />
+                                                <small id="telefoneContatoHelp" class="form-text text-muted">Informe apenas os núemros do telefone completo com DDD. Exemplo: 71999999999.</small>
+                                            </div>
+                                        </div>
+                                        <!--fim row-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Fim COLLAPSE Identificação do cliente-->
+                            <!--COLLAPSE Informações Volumetria-->
+                            <div class="card">
+                                <header>
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-t collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Informações de Volumetria:
+                                            </button>
+                                        </h5>
+                                    </div>
+                                </header>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="qtdBeneficiarios">Quantas vidas (beneficiários) de sua empresa?</span>
+                                                    </div>
+                                                    <input type="number" class="form-control" placeholder="QTD" name="qtdBeneficiarios" aria-label="Quantidade vidas" aria-describedby="basic-addon1" required/>
+                                                    <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="qtdPrestadores">Quantos prestadores credenciados?</span>
+                                                    </div>
+                                                    <input type="number" class="form-control" placeholder="QTD" name="qtdPrestadores" aria-label="Quantidade prestadores" aria-describedby="basic-addon1" required/>
+                                                    <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="volumeAutorizacoes">Volume mensal de autorizações emitidas (senhas):</span>
+                                                    </div>
+                                                    <input name="qtdeAutorizacoes" id="qtdeAutorizacoes" type="number" class="form-control" placeholder="QTD" aria-label="Quantidade autorizações" aria-describedby="basic-addon1" required/>
+                                                    <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="volumeContas">Volume mensal de contas médicas processadas:</span>
+                                                    </div>
+                                                    <input type="number" class="form-control" placeholder="QTD" name="volumeContas" aria-label="Quantidade contas" aria-describedby="basic-addon1" required/>
+                                                    <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="qtdUsuarios">Estimativa de pessoas que utilizarão o sistema:</span>
+                                                    </div>
+                                                    <input name="qtdUsuarios" id="qtdUsuarios" type="number" class="form-control" placeholder="QTD" aria-label="Quantidade usuários" aria-describedby="basic-addon1" required/>
+                                                    <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Fim COLLAPSE Informações Volumetria-->
+                            <!--COLLAPSE Informações Gerais-->
+                            <div class="card">
+                                <header>
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-t collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Informações Gerais:
+                                            </button>
+                                        </h5>
+                                    </div>
+                                </header>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="sistemaAtual">Sistema de saúde utilizado atualmente:</span>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Nome..." name="sistemaAtual" aria-label="Sistema de saúde" aria-describedby="basic-addon1" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="precisaTreinamento">Você necessitará de treinamento?</span>
+                                                    </div>
+                                                    <select class="custom-select" name="precisaTreinamento">
+                                                        <option selected>Escolher...</option>
+                                                        <option value="sim">Sim</option>
+                                                        <option value="não">Não</option>
+                                                        <option value="misto">Existe a possibilidade</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="padraoANS">Sua empresa utiliza o padrão TISS da ANS?</span>
+                                                    </div>
+                                                    <select class="custom-select" name="padraoANS">
+                                                        <option selected>Escolher...</option>
+                                                        <option value="sim">Sim. Apenas padrão ANS</option>
+                                                        <option value="não">Não. Apenas padrão próprio</option>
+                                                        <option value="misto">Misto. ANS e próprio</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="customizacao">Pretende realizar customizações no sistema?</span>
+                                                    </div>
+                                                    <select class="custom-select" name="customizacao">
+                                                        <option selected>Escolher...</option>
+                                                        <option value="sim">Sim</option>
+                                                        <option value="não">Não</option>
+                                                        <option value="talvez">Existe a possibilidade</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="integracao">Pretende integrar dados de outros sistemas?</span>
+                                                    </div>
+                                                    <select class="custom-select" name="selectIntegracao" id="selectIntegracao">
+                                                        <option value="Escolher">Escolher...</option>
+                                                        <option value="sim">Sim</option>
+                                                        <option value="não">Não</option>
+                                                        <option value="misto">Existe a possibilidade</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="suporte">Pretende contratar suporte ao cliente?</span>
+                                                    </div>
+                                                    <select class="custom-select" name="suporte">
+                                                        <option selected>Escolher...</option>
+                                                        <option value="sim">Sim</option>
+                                                        <option value="não">Não</option>
+                                                        <option value="talvez">Existe a possibilidade</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="integracao">Você já conhece nossos sistemas?</span>
+                                                    </div>
+                                                    <select class="custom-select" name="integracao">
+                                                        <option value="Escolher">Escolher...</option>
+                                                        <option value="sim">Sim</option>
+                                                        <option value="não">Não</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="appMovel">Pretende usar aplicativo para dispositivo móvel?</span>
+                                                    </div>
+                                                    <select class="custom-select" name="selectAppMovel" id="selectAppMovel" onchange="appMovel()">
+                                                        <option value="Escolher">Escolher...</option>
+                                                        <option value="sim">Sim</option>
+                                                        <option value="não">Não</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col" id="addDiv"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Fim COLLAPSE Informações Gerais-->
+                            <!--COLLAPSE Produtos e Serviços-->
+                            <div class="card">
+                                <header>
+                                    <div class="card-header" id="headingFour">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-t collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                Produtos e Serviços:
+                                            </button>
+                                        </h5>
+                                    </div>
+                                </header>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <h5 class="mar-b20">Quais dos Módulos você pretende utilizar?</h5>
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloAtendimento">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloAtendimento" aria-describedby="nomeHelp" />Módulo de Atendimento
+                                                        <small id="moduloAtendimento" class="form-text text-muted">Sistema pelo qual os prestadores solicitam seus pedidos de senhas</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloAut">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloAut" aria-describedby="nomeHelp" />Módulo de Autorização
+                                                        <small id="moduloAut" class="form-text text-muted">Sistema pelo qual a operadora avalia e autoriza os pedidos recebidos</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloContas">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloContas" aria-describedby="nomeHelp" />Módulo de Contas Médicas
+                                                        <small id="moduloContas" class="form-text text-muted">Sistema pelo qual os prestadores enviam suas faturas e recurso de glosa</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloAudConcorrente">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloAudConcorrente" aria-describedby="nomeHelp" />Módulo de Auditoria Concorrente
+                                                        <small id="moduloAudConcorrente" class="form-text text-muted">Sistema pelo qual a operadora registra as auditorias</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloCadastro">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloCadastro" aria-describedby="nomeHelp" />Módulo de Cadastro
+                                                        <small id="moduloCadastro" class="form-text text-muted">Sistema pelo qual os beneficiários da operadora são inscritos e geridos</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloFatramento">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloFatramento" aria-describedby="nomeHelp" />Módulo de Faturamento
+                                                        <small id="moduloFatramento" class="form-text text-muted">Sistema pela qual é realizada a gestão financeira e coparticipação dos beneficiários</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloCredenciamento">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloCredenciamento" aria-describedby="nomeHelp" />Módulo de Credenciamento
+                                                        <small id="moduloCredenciamento" class="form-text text-muted">Sistema pelo qual os prestadores da operadora são inscritos e geridos</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloRegras">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloRegras" aria-describedby="nomeHelp" />Módulo de Editor de Regras
+                                                        <small id="moduloRegras" class="form-text text-muted">Sistema pelo qual as regras técnicas e operacionais da operadora são mantidas</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloPagamento">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloPagamento" aria-describedby="nomeHelp" />Módulo de Pagamento
+                                                        <small id="moduloPagamento" class="form-text text-muted">Sistema pelo qual o processamento das contas de uma competência é finalizado</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloRelacionamento">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloRelacionamento" aria-describedby="nomeHelp" />Módulo de Relacionamento
+                                                        <small id="moduloRelacionamento" class="form-text text-muted">Sistema pelo qual os protocolos de atendimentos realizados a beneficiários e prestadores são registrados</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloDinamico">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloDinamico" aria-describedby="nomeHelp" />Módulo de Relatório Dinâmico
+                                                        <small id="moduloDinamico" class="form-text text-muted">Sistema pelo qual é possível modelar relatórios a partir das informações dispostas nos módulos</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloAis">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloAis" aria-describedby="nomeHelp" />Módulo de Atenção Integral à Saúde
+                                                        <small id="moduloAis" class="form-text text-muted">Sistema pelo qual a operadora realiza a gestão de beneficiários inscritos no programa</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloJudicializacao">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloJudicializacao" aria-describedby="nomeHelp" />Módulo de Judicialização
+                                                        <small id="moduloJudicializacao" class="form-text text-muted">Sistema pelo qual as demandas de liminares podem ser geridas</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloPep">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloPep" aria-describedby="nomeHelp" />Módulo de Prontuário Eletrônico
+                                                        <small id="moduloPep" class="form-text text-muted">Sistema pelo qual a operadora realiza a gestão de beneficiários atendidos por telemedicina e/ou teleatendimento</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloRah">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloRah" aria-describedby="nomeHelp" />Módulo de RAH
+                                                        <small id="moduloRah" class="form-text text-muted">Sistema pelo qual, através de digitação ou carga de xml, os relatórios de auditoria hospitalar podem ser geridos</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="moduloCallCenter">
+                                                        <input type="checkbox" class="form-checkinput" id="moduloCallCenter" aria-describedby="nomeHelp" />Central de Relacionamento com Cliente
+                                                        <small id="moduloCallCenter" class="form-text text-muted">
+                                                            Plataforma digital utilizada para relacionamento junto ao público interno e externo através de multicanais – telefone, SMS, chatbot e whatsapp
+                                                        </small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col"></div>
+
+                                            <div class="form-group col"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim COLLAPSE Produtos e Serviços-->
+                            <!--COLLAPSE Informações Complementares-->
+                            <div class="card">
+                                <header>
+                                    <div class="card-header" id="headingFive">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-t collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                Informações Complementares:
+                                            </button>
+                                        </h5>
+                                    </div>
+                                </header>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <h5 class="mar-b20">Você pretende migrar dados históricos? Se sim, quais?</h5>
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="migBeneficiarios"> <input type="checkbox" class="form-checkinput" id="migBeneficiarios" aria-describedby="migBeneficiariosHelp" />Beneficiários </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="migPrestadores"> <input type="checkbox" class="form-checkinput" id="migPrestadores" aria-describedby="migPrestadoresHelp" />Prestadores </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="migAutorizacoes"> <input type="checkbox" class="form-checkinput" id="migAutorizacoes" aria-describedby="migAutorizacoesHelp" />Autorizações </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="migContasMedicas"> <input type="checkbox" class="form-checkinput" id="migContasMedicas" aria-describedby="migContasMedicasHelp" />Contas Médicas </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="migFaturamento"> <input type="checkbox" class="form-checkinput" id="migFaturamento" aria-describedby="migFaturamentoHelp" />Cobrança e Pagamentos (Beneficiários) </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="migPagamento"> <input type="checkbox" class="form-checkinput" id="migPagamento" aria-describedby="migPagamentoHelp" />Cobrança e Pagamento (Prestadores) </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <div class="input-group">
+                                                    <label for="migUsuarios"> <input type="checkbox" class="form-checkinput" id="migUsuarios" aria-describedby="migUsuariosHelp" />Usuários e Perfis </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col"></div>
+                                            <div class="form-group col"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fim COLLAPSE Informações Complementares -->
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <div class="input-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="checkConfirmacao" aria-describedby="checkConfirmacaoHelp" required />
+                                        <label class="form-check-label" for="checkConfirmacao">Declaro que as informações acima prestadas são verdadeiras, e assumo a inteira responsabilidade pelas mesmas.</label>
+                                        <div class="invalid-feedback">
+                                            Você deve concordar, antes de continuar.
+                                        </div>
+                                    </div>
+                                    <div class="input-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="checkpolitica" aria-describedby="checkpoliticaHelp" required />
+                                        <label class="form-check-label" for="checkpolitica">Declaro que li e estou de acordo com a <a href="#" target="_parent">Política de Privacidade da Qualirede</a> com relação aos meus dados fornecidos neste site.</label>
+                                        <div class="invalid-feedback">
+                                            Você deve concordar, antes de continuar.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="row">
+                <div id="rodape" class="col-sm">
+                    <p>COPYRIGHT 2023 - QUALIREDE</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            (function () {
+                "use strict";
+                window.addEventListener(
+                    "load",
+                    function () {
+                        var forms = document.getElementsByClassName("needs-validation");
+                        var validation = Array.prototype.filter.call(forms, function (form) {
+                            form.addEventListener(
+                                "submit",
+                                function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add("was-validated");
+                                },
+                                false
+                            );
+                        });
+                    },
+                    false
+                );
+            })();
+        </script>
+        <script language="JavaScript" type="text/javascript" charset="utf-8">
+            new dgCidadesEstados({
+            cidade: document.getElementById('cidade'),
+            estado: document.getElementById('estado')
+            })
+        </script>
+        <script src="js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
