@@ -25,7 +25,7 @@ main{
 .input-group-text {
     background-color: #524fa1 !important;
     color: #FFFFFF !important;
-    min-width: 379px;
+   /* min-width: 379px;*/
 }
 .form-check-input, .form-checkinput{
     padding: 0;
@@ -62,4 +62,23 @@ main{
 }
 .modal-dialog {
     min-width: 60vw !important;
+}
+.display-unset{
+    display: unset !important;
+}
+.display-block{
+    display: block !important;
+}
+
+@media (max-width: 420px){
+    .input-group-text{
+        width: 308px;
+        font-size:80%;
+    }
+}
+
+@media (min-width: 421px){
+    .input-group-text{
+        min-width: 379px;
+    }
 }

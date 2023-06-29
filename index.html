@@ -9,7 +9,7 @@
         <title>Formulário de coleta de requisitos</title>
         <script type="text/javascript" src="js/cidades-estados-1.4-utf8.js"></script>
     </head>
-    <body class="bg-light" onload="appMovel();marcar()">
+    <body class="bg-light" onload="appMovel();marcar();addIntegracao()">
         <main role="main" class="container">
             <header>
                 <div class="row">
@@ -30,8 +30,8 @@
             </header>
             <section>
                 <div class="my-3 p-3 bg-white rounded shadow-sm">
-                    <div class="accordion" id="accordionExample">
-                        <form action="calcular.php" method="post" class="needs-validation" novalidate>
+                    <form action="calcular.php" method="post" class="needs-validation" novalidate>
+                        <div class="accordion" id="accordionExample">
                             <!--COLLAPSE Identificação do cliente-->
                             <div class="card">
                                 <header>
@@ -117,7 +117,15 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="qtdBeneficiarios">Quantas vidas (beneficiários) de sua empresa?</span>
                                                     </div>
-                                                    <input type="number" class="form-control" placeholder="QTD" name="qtdBeneficiarios" aria-label="Quantidade de beneficiários" aria-describedby="Informação sobre a quantidade de beneficiários" required />
+                                                    <input
+                                                        type="number"
+                                                        class="form-control"
+                                                        placeholder="QTD"
+                                                        name="qtdBeneficiarios"
+                                                        aria-label="Quantidade de beneficiários"
+                                                        aria-describedby="Informação sobre a quantidade de beneficiários"
+                                                        required
+                                                    />
                                                     <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
                                                 </div>
                                             </div>
@@ -126,7 +134,15 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="qtdPrestadores">Quantos prestadores credenciados?</span>
                                                     </div>
-                                                    <input type="number" class="form-control" placeholder="QTD" name="qtdPrestadores" aria-label="Quantidade de prestadores" aria-describedby="Informação sobre a quantidade de prestadores" required />
+                                                    <input
+                                                        type="number"
+                                                        class="form-control"
+                                                        placeholder="QTD"
+                                                        name="qtdPrestadores"
+                                                        aria-label="Quantidade de prestadores"
+                                                        aria-describedby="Informação sobre a quantidade de prestadores"
+                                                        required
+                                                    />
                                                     <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
                                                 </div>
                                             </div>
@@ -138,7 +154,16 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="volumeAutorizacoes">Volume mensal de autorizações emitidas (senhas):</span>
                                                     </div>
-                                                    <input name="qtdeAutorizacoes" id="qtdeAutorizacoes" type="number" class="form-control" placeholder="QTD" aria-label="Quantidade autorizações" aria-describedby="Informação sobre a quantidade autorizações" required />
+                                                    <input
+                                                        name="qtdeAutorizacoes"
+                                                        id="qtdeAutorizacoes"
+                                                        type="number"
+                                                        class="form-control"
+                                                        placeholder="QTD"
+                                                        aria-label="Quantidade autorizações"
+                                                        aria-describedby="Informação sobre a quantidade autorizações"
+                                                        required
+                                                    />
                                                     <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
                                                 </div>
                                             </div>
@@ -159,7 +184,16 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="qtdUsuarios">Estimativa de pessoas que utilizarão o sistema:</span>
                                                     </div>
-                                                    <input name="qtdUsuarios" id="qtdUsuarios" type="number" class="form-control" placeholder="QTD" aria-label="Quantidade usuários" aria-describedby="Informação sobre a quantidade usuários" required />
+                                                    <input
+                                                        name="qtdUsuarios"
+                                                        id="qtdUsuarios"
+                                                        type="number"
+                                                        class="form-control"
+                                                        placeholder="QTD"
+                                                        aria-label="Quantidade usuários"
+                                                        aria-describedby="Informação sobre a quantidade usuários"
+                                                        required
+                                                    />
                                                     <div class="invalid-feedback">Forneça ao menos uma estimativa</div>
                                                 </div>
                                             </div>
@@ -188,7 +222,14 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="sistemaAtual">Sistema de saúde utilizado atualmente:</span>
                                                     </div>
-                                                    <input type="text" class="form-control" placeholder="Nome..." name="sistemaAtual" aria-label="Sistema de saúde" aria-describedby="Informação sobre o sistema de saúde utilizado atualmente" />
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        placeholder="Nome..."
+                                                        name="sistemaAtual"
+                                                        aria-label="Sistema de saúde"
+                                                        aria-describedby="Informação sobre o sistema de saúde utilizado atualmente"
+                                                    />
                                                 </div>
                                             </div>
                                             <div class="form-group col">
@@ -241,11 +282,11 @@
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="integracao">Pretende integrar dados de outros sistemas?</span>
                                                     </div>
-                                                    <select class="custom-select" name="selectIntegracao" id="selectIntegracao">
+                                                    <select class="custom-select" name="selectIntegracao" id="selectIntegracao" onchange="addIntegracao()">
                                                         <option value="Escolher">Escolher...</option>
                                                         <option value="sim">Sim</option>
                                                         <option value="não">Não</option>
-                                                        <option value="misto">Existe a possibilidade</option>
+                                                        <option value="talvez">Existe a possibilidade</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -290,9 +331,38 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="form-row">
-                                            <div class="form-group col" id="addDiv"></div>
+                                            <div class="form-group col" id="ativiarDivIntegracao" hidden="true">
+                                                <div class="input-group" id="addIntegracao">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="integrcaoApi">Tais sistemas possuem documentações de APIs?</span>
+                                                    </div>
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        placeholder="Informe se possuem documentação das APIs para integração..."
+                                                        name="integracaoApi"
+                                                        aria-label="Integração via Apis"
+                                                        aria-describedby="basic-addon1"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="form-group col" id="ativiarDivMovel" hidden="true">
+                                                <div class="input-group" id="addAppMovel">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="quaisApps">Quais Apps para dispositivos móveis?</span>
+                                                    </div>
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        placeholder="Liste os nomes dos apps ou para que eles servem..."
+                                                        name="quaisApps"
+                                                        aria-label="Apps para dispositivos móveis"
+                                                        aria-describedby="basic-addon1"
+                                                        required
+                                                    />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -315,7 +385,14 @@
                                         <div class="form-row">
                                             <div class="form-group col">
                                                 <div class="input-group form-check">
-                                                    <input type="checkbox" class="form-check-input" id="moduloAtendimento" onchange="marcar()" aria-labelledby="moduloAtendimento" aria-describedby="Opção para selecionar o Módulo de Atendimento" />
+                                                    <input
+                                                        type="checkbox"
+                                                        class="form-check-input"
+                                                        id="moduloAtendimento"
+                                                        onchange="marcar()"
+                                                        aria-labelledby="moduloAtendimento"
+                                                        aria-describedby="Opção para selecionar o Módulo de Atendimento"
+                                                    />
                                                     <label class="form-check-label" for="moduloAtendimento">Módulo de Atendimento</label>
                                                     <div class="invalid-feedback">Esse módulo é pré requisto para outro módulo</div>
                                                     <small id="moduloAtendimento" class="form-text text-muted">Sistema pelo qual os prestadores solicitam seus pedidos de senhas</small>
@@ -341,7 +418,14 @@
                                         <div class="form-row">
                                             <div class="form-group col">
                                                 <div class="input-group form-check">
-                                                    <input type="checkbox" class="form-check-input" id="moduloAudConcorrente" onchange="marcar()" aria-labelledby="moduloAudConcorrente" aria-describedby="Opção para selecionar o Módulo de Auditoria Concorrente" />
+                                                    <input
+                                                        type="checkbox"
+                                                        class="form-check-input"
+                                                        id="moduloAudConcorrente"
+                                                        onchange="marcar()"
+                                                        aria-labelledby="moduloAudConcorrente"
+                                                        aria-describedby="Opção para selecionar o Módulo de Auditoria Concorrente"
+                                                    />
                                                     <label class="form-check-label" for="moduloAudConcorrente">Módulo de Auditoria Concorrente</label>
                                                     <div class="invalid-feedback">Esse módulo é pré requisto para outro módulo</div>
                                                     <small id="moduloAudConcorrente" class="form-text text-muted">Sistema pelo qual a operadora registra as auditorias</small>
@@ -357,7 +441,14 @@
                                             </div>
                                             <div class="form-group col">
                                                 <div class="input-group form-check">
-                                                    <input type="checkbox" class="form-check-input" id="moduloFatramento" onchange="marcar()" aria-labelledby="moduloFatramento" aria-describedby="Opção para selecionar o Módulo de Faturamento" />
+                                                    <input
+                                                        type="checkbox"
+                                                        class="form-check-input"
+                                                        id="moduloFatramento"
+                                                        onchange="marcar()"
+                                                        aria-labelledby="moduloFatramento"
+                                                        aria-describedby="Opção para selecionar o Módulo de Faturamento"
+                                                    />
                                                     <label class="form-check-label" for="moduloFatramento">Módulo de Faturamento</label>
                                                     <div class="invalid-feedback">Esse módulo é pré requisto para outro módulo</div>
                                                     <small id="moduloFatramento" class="form-text text-muted">Sistema pela qual é realizada a gestão financeira e coparticipação dos beneficiários</small>
@@ -453,10 +544,13 @@
                                             </div>
                                             <div class="form-group col">
                                                 <div class="input-group form-check">
-                                                    <input type="checkbox" class="form-check-input" id="moduloCallCenter" aria-labelledby="moduloCallCenter" aria-describedby="Opção para selecionar o Módulo de Contact Center" />Central de Relacionamento com Cliente
+                                                    <input type="checkbox" class="form-check-input" id="moduloCallCenter" aria-labelledby="moduloCallCenter" aria-describedby="Opção para selecionar o Módulo de Contact Center" />Central de
+                                                    Relacionamento com Cliente
                                                     <label class="form-check-label" for="moduloCallCenter"></label>
                                                     <div class="invalid-feedback">Esse módulo é pré requisto para outro módulo</div>
-                                                    <small id="moduloCallCenter" class="form-text text-muted">Plataforma digital utilizada para relacionamento junto ao público interno e externo através de multicanais – telefone, SMS, chatbot e whatsapp</small>
+                                                    <small id="moduloCallCenter" class="form-text text-muted">
+                                                        Plataforma digital utilizada para relacionamento junto ao público interno e externo através de multicanais – telefone, SMS, chatbot e whatsapp
+                                                    </small>
                                                 </div>
                                             </div>
                                             <div class="form-group col"></div>
@@ -482,7 +576,9 @@
                                         <div class="form-row">
                                             <div class="form-group col">
                                                 <div class="input-group">
-                                                    <label for="migBeneficiarios"> <input type="checkbox" class="form-checkinput" id="migBeneficiarios" aria-describedby="Opção para selecionar a migração de beneficiários" />Beneficiários </label>
+                                                    <label for="migBeneficiarios">
+                                                        <input type="checkbox" class="form-checkinput" id="migBeneficiarios" aria-describedby="Opção para selecionar a migração de beneficiários" />Beneficiários
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div class="form-group col">
@@ -492,24 +588,32 @@
                                             </div>
                                             <div class="form-group col">
                                                 <div class="input-group">
-                                                    <label for="migAutorizacoes"> <input type="checkbox" class="form-checkinput" id="migAutorizacoes" aria-describedby="Opção para selecionar a migração de autorizações" />Autorizações </label>
+                                                    <label for="migAutorizacoes">
+                                                        <input type="checkbox" class="form-checkinput" id="migAutorizacoes" aria-describedby="Opção para selecionar a migração de autorizações" />Autorizações
+                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col">
                                                 <div class="input-group">
-                                                    <label for="migContasMedicas"> <input type="checkbox" class="form-checkinput" id="migContasMedicas" aria-describedby="Opção para selecionar a migração de contas médicas" />Contas Médicas </label>
+                                                    <label for="migContasMedicas">
+                                                        <input type="checkbox" class="form-checkinput" id="migContasMedicas" aria-describedby="Opção para selecionar a migração de contas médicas" />Contas Médicas
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div class="form-group col">
                                                 <div class="input-group">
-                                                    <label for="migFaturamento"> <input type="checkbox" class="form-checkinput" id="migFaturamento" aria-describedby="Opção para selecionar a migração de faturamento" />Cobrança e Pagamentos (Beneficiários) </label>
+                                                    <label for="migFaturamento">
+                                                        <input type="checkbox" class="form-checkinput" id="migFaturamento" aria-describedby="Opção para selecionar a migração de faturamento" />Cobrança e Pagamentos (Beneficiários)
+                                                    </label>
                                                 </div>
                                             </div>
                                             <div class="form-group col">
                                                 <div class="input-group">
-                                                    <label for="migPagamento"> <input type="checkbox" class="form-checkinput" id="migPagamento" aria-describedby="Opção para selecionar a migração de pagamento" />Cobrança e Pagamento (Prestadores) </label>
+                                                    <label for="migPagamento">
+                                                        <input type="checkbox" class="form-checkinput" id="migPagamento" aria-describedby="Opção para selecionar a migração de pagamento" />Cobrança e Pagamento (Prestadores)
+                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
@@ -525,20 +629,27 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="card"></div>
                             <!-- Fim COLLAPSE Informações Complementares -->
                             <div class="form-row">
                                 <div class="form-group col">
-                                    <div class="input-group form-check">
+                                    <div class="input-group form-check display-block">
                                         <input type="checkbox" class="form-check-input" id="checkConfirmacao" aria-labelledby="checkConfirmacao" aria-describedby="Opção de check para confirmar que as declarações são verdadeiras" required />
-                                        <label class="form-check-label" for="checkConfirmacao">Declaro que as informações acima prestadas são verdadeiras, e assumo a inteira responsabilidade pelas mesmas.</label>
+                                        <label class="form-check-label display-unset" for="checkConfirmacao">Declaro que as informações acima prestadas são verdadeiras, e assumo a inteira responsabilidade pelas mesmas.</label>
                                         <div class="invalid-feedback">
                                             Você deve concordar, antes de continuar.
                                         </div>
                                     </div>
-                                    <div class="input-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="checkpolitica" aria-labelledby="checkpolitica" aria-describedby="Opção de check para confirmar que leu e aceita as políticas de privacidade" required />
-                                        <label class="form-check-label" for="checkpolitica">
+                                    <div class="input-group form-check display-block">
+                                        <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkpolitica"
+                                            aria-labelledby="checkpolitica"
+                                            aria-describedby="Opção de check para confirmar que leu e aceita as políticas de privacidade"
+                                            required
+                                        />
+                                        <label class="form-check-label display-unset" for="checkpolitica">
                                             Declaro que li e estou de acordo com a <a href="#modalPoliticaPrivacidade" data-toggle="modal">Política de Privacidade da Qualirede</a> com relação aos meus dados fornecidos neste site.
                                         </label>
                                         <div class="invalid-feedback">
@@ -1043,8 +1154,9 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Enviar</button>
-                        </form>
-                    </div>
+                        </div>
+                        <!-- FIM DIV accordionExample -->
+                    </form>
                 </div>
             </section>
         </main>
