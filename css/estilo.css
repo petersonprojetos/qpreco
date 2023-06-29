@@ -72,9 +72,13 @@ main{
 
 @media (max-width: 420px){
     .input-group-text{
-        width: 308px;
-        font-size:80%;
+        width: 287px;
+        font-size:75%;
     }
+    .col{
+        flex-basis: auto;
+    }
+
 }
 
 @media (min-width: 421px){
